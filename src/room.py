@@ -13,3 +13,15 @@ class Room:
 
     def check_in_guest(self,guest):
         self.guest_list.append(guest)
+
+    def check_out_guest(self,guest):
+        self.guest_list.remove(guest)
+
+
+# # # 11
+# def remove_pet_by_name(shop, name):
+#     dictionary_key = 0
+#     for pet in shop['pets']:
+#       if pet['name'] == name:
+#         shop['pets'].pop(dictionary_key)
+#       dictionary_key += 1
