@@ -43,4 +43,12 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Club Tropicana", self.room_2.song_played_title)
         self.assertEqual("Thunderstruck", self.room_3.song_played_title)
 
+    def test_room_has_song_played_artist(self):
+        self.assertEqual("The Notorious B.I.G", self.room_1.song_played_artist)
+        self.assertEqual("Wham", self.room_2.song_played_artist)
+        self.assertEqual("ACDC", self.room_3.song_played_artist)
+
+    def test_room_has_no_guests(self):
+        self.assertEqual(0, self.room_1.guest_count())
+
     

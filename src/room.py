@@ -7,3 +7,6 @@ class Room:
         self.fee = fee
         self.till = till
         self.guest_list = []
+
+    def guest_count(self):
+        return(len(self.guest_list))
