@@ -33,4 +33,14 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(6, self.room_2.capacity)
         self.assertEqual(6, self.room_3.capacity)
 
+    def test_room_has_till(self):
+        self.assertEqual(100, self.room_1.till)
+        self.assertEqual(150, self.room_2.till)
+        self.assertEqual(200, self.room_3.till)
+
+    def test_room_has_song_played_title(self):
+        self.assertEqual("Juicy", self.room_1.song_played_title)
+        self.assertEqual("Club Tropicana", self.room_2.song_played_title)
+        self.assertEqual("Thunderstruck", self.room_3.song_played_title)
+
     
