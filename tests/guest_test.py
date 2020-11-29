@@ -17,3 +17,12 @@ class TestGuest(unittest.TestCase):
         self.assertEqual("Stuart", self.guest_4.name)
         self.assertEqual("Liz", self.guest_5.name)
         self.assertEqual("Rosie", self.guest_6.name)
+
+    def test_guest_has_wallet(self):
+        self.assertEqual(50, self.guest_1.wallet)
+        self.assertEqual(40, self.guest_2.wallet)
+        self.assertEqual(60, self.guest_3.wallet)
+        self.assertEqual(30, self.guest_4.wallet)
+        self.assertEqual(50, self.guest_5.wallet)
+        self.assertEqual(40, self.guest_6.wallet)
+        
