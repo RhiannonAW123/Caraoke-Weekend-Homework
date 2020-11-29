@@ -60,5 +60,13 @@ class TestRoom(unittest.TestCase):
         self.room_1.check_in_guest(self.guest_1)
         self.room_1.check_out_guest(self.guest_1)
         self.assertEqual(0, self.room_1.guest_count())
+
+    def test_play_list_has_no_songs(self):
+        self.assertEqual(0, self.room_1.song_count())
+
+    def test_add_song_to_room(self):
+        self.room_1.add_song_to_play_list(self.song_1)
+        self.assertEqual("Juicy", self.room_1.play_list[0].title)
+        self.assertEqual(1, self.room_1.song_count())
         
     

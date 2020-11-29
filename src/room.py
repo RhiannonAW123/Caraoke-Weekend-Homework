@@ -7,6 +7,7 @@ class Room:
         self.fee = fee
         self.till = till
         self.guest_list = []
+        self.play_list = []
 
     def guest_count(self):
         return(len(self.guest_list))
@@ -17,11 +18,13 @@ class Room:
     def check_out_guest(self,guest):
         self.guest_list.remove(guest)
 
+    def song_count(self):
+        return(len(self.play_list))
 
-# # # 11
-# def remove_pet_by_name(shop, name):
-#     dictionary_key = 0
-#     for pet in shop['pets']:
-#       if pet['name'] == name:
-#         shop['pets'].pop(dictionary_key)
-#       dictionary_key += 1
+    def add_song_to_play_list(self,song):
+        self.play_list.append(song)
+           
+ 
+
+    
+        
